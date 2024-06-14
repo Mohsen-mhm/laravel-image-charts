@@ -57,6 +57,10 @@ You can then use this URL to display the chart in your application.
 <img src="{{ $chartUrl }}" alt="Chart">
 ```
 
+### Output
+
+<img src="example.png" alt="Example chart">
+
 ## Methods
 
 The ImageChart class provides the following methods for configuring your chart:
