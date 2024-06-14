@@ -17,17 +17,17 @@ class ImageChart
     private string $datasetLabel = '';
     private bool $datasetFill = false;
 
-    public function __construct(array $config)
+    public function __construct()
     {
-        $this->baseUrl = config('image-charts.base_url');
+        $this->baseUrl = config('image-charts.base_url', 'https://image-charts.com/chart.js/2.8.0');
 
         // Initialize properties from configuration
-        $this->bgColor = $config['default_bg_color'] ?? '#2B2B2B';
-        $this->datasetBgColor = $config['default_dataset_bg_color'] ?? '#FCBB3D';
-        $this->datasetBorderColor = $config['default_dataset_border_color'] ?? '#FCBB3D';
-        $this->width = $config['default_width'] ?? '900';
-        $this->height = $config['default_height'] ?? '600';
-        $this->titleText = $config['default_title_text'] ?? 'Price over Time';
+        $this->bgColor = config('image-charts.default_bg_color', '#2B2B2B');
+        $this->datasetBgColor = config('image-charts.default_dataset_bg_color', '#FCBB3D');
+        $this->datasetBorderColor = config('image-charts.default_dataset_border_color', '#FCBB3D');
+        $this->width = config('image-charts.default_width', '900');
+        $this->height = config('image-charts.default_height', '600');
+        $this->titleText = config('image-charts.default_title_text', 'mohsen.sbs');
     }
 
     public function setLabels(array $labels): self
@@ -42,7 +42,7 @@ class ImageChart
         return $this;
     }
 
-    public function generateImageChartUrl(): string
+    public function getUrl(): string
     {
         $config = [
             "type" => "line",
