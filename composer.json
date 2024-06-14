@@ -27,7 +27,7 @@
     "php": "^8.2|^8.3",
     "laravel/framework": "^9.0|^10.0|^11.0"
   },
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "config": {
     "sort-packages": true,
