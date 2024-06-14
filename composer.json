@@ -9,7 +9,6 @@
   ],
   "homepage": "https://github.com/Mohsen-mhm/laravel-image-charts",
   "license": "MIT",
-  "version": "1.0.0",
   "autoload": {
     "psr-4": {
       "MohsenMhm\\LaravelImageCharts\\": "src/"
@@ -33,5 +32,15 @@
     "sort-packages": true,
     "preferred-install": "dist",
     "optimize-autoloader": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "MohsenMhm\\LaravelImageCharts\\ImageChartsServiceProvider"
+      ],
+      "aliases": {
+        "ImageChart": "MohsenMhm\\LaravelImageCharts\\Facades\\ImageChart"
+      }
+    }
   }
 }
