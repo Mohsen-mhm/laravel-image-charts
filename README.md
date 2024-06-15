@@ -2,6 +2,8 @@
 
 Image-charts PHP library to generate charts in image format for your Laravel application.
 
+<img src="logo.png" alt="Logo">
+
 ## Installation
 
 You can install the package via Composer:
