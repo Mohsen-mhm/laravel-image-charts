@@ -59,7 +59,7 @@ $chartUrl = (new ImageChart())
 or use Facade:
 
 ```php
-use MohsenMhm\LaravelImageCharts\ImageChart;
+use MohsenMhm\LaravelImageCharts\Facades\ImageChartFacade as ImageChart;
 
 $chartUrl = ImageChart::setData([10, 20, 30])
         ->setLabels(['January', 'February', 'March'])
@@ -89,7 +89,7 @@ $fullImagePath = (new ImageChart())
 or use Facade:
 
 ```php
-use MohsenMhm\LaravelImageCharts\ImageChart;
+use MohsenMhm\LaravelImageCharts\Facades\ImageChartFacade as ImageChart;
 
 $fullImagePath = ImageChart::setData([10, 20, 30])
         ->setLabels(['January', 'February', 'March'])
@@ -114,7 +114,7 @@ $fullImagePath = (new ImageChart())
 or use Facade:
 
 ```php
-use MohsenMhm\LaravelImageCharts\ImageChart;
+use MohsenMhm\LaravelImageCharts\Facades\ImageChartFacade as ImageChart;
 
 $customPath = storage_path('app/public/custom_charts');
 
