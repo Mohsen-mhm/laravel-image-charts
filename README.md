@@ -35,10 +35,13 @@ return [
     'default_width' => '900',
     'default_height' => '600',
     'default_title_text' => 'mohsen.sbs',
+    'default_image_path' => storage_path('app/public/charts'),
 ];
 ```
 
 ## Usage
+
+### Generating a Chart URL
 
 Here's an example of how to use the package to generate a chart URL:
 
@@ -57,6 +60,35 @@ You can then use this URL to display the chart in your application.
 <img src="{{ $chartUrl }}" alt="Chart">
 ```
 
+### Downloading the Chart Image
+
+You can also download the generated chart image to a local file. If no path is specified, the image will be saved to the
+default path specified in the configuration file.
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+$fullImagePath = (new ImageChart())
+        ->setData([10, 20, 30])
+        ->setLabels(['January', 'February', 'March'])
+        ->getImage();
+
+```
+
+This will save the image to the default path with a generated file name and return the full path to the saved image. You
+can also specify a custom path:
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+$customPath = storage_path('app/public/custom_charts');
+
+$fullImagePath = (new ImageChart())
+        ->setData([10, 20, 30])
+        ->setLabels(['January', 'February', 'March'])
+        ->getImage($customPath);
+```
+
 ### Output
 
 <img src="example.png" alt="Example chart">
@@ -65,9 +97,17 @@ You can then use this URL to display the chart in your application.
 
 The ImageChart class provides the following methods for configuring your chart:
 
-* setData(array $data): Set the data points for the chart.
-* setLabels(array $labels): Set the labels for the chart.
-* getUrl(): Generate and return the chart URL.
+* `setData(array $data)`: Set the data points for the chart.
+* `setLabels(array $labels)`: Set the labels for the chart.
+* `setBackgroundColor(string $color)`: Set the background color for the chart.
+* `setDatasetBackgroundColor(string $color)`: Set the background color for the dataset.
+* `setDatasetBorderColor(string $color)`: Set the border color for the dataset.
+* `setWidth(string $width)`: Set the width of the chart.
+* `setHeight(string $height)`: Set the height of the chart.
+* `setTitleText(string $title)`: Set the title text of the chart.
+* `getUrl()`: Generate and return the chart URL.
+* `getImage(string $path = null)`: Download the chart image to a specified local file path, or use the default path
+  if not specified. Returns the full path to the saved image.
 
 ## License
 

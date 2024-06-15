@@ -16,6 +16,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Default Image Storage Path
+    |--------------------------------------------------------------------------
+    |
+    | This value defines the default storage path for the downloaded chart
+    | images. You can change this to any valid path where you want to store
+    | the chart images.
+    |
+    */
+    'default_image_path' => storage_path('app/public/charts'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Default Background Color
     |--------------------------------------------------------------------------
     |

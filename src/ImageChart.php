@@ -2,12 +2,14 @@
 
 namespace MohsenMhm\LaravelImageCharts;
 
+use Illuminate\Support\Facades\Http;
+
 class ImageChart
 {
     private string $baseUrl;
 
-    private array $labels;
-    private array $data;
+    private array $labels = [];
+    private array $data = [];
     private string $bgColor;
     private string $datasetBgColor;
     private string $datasetBorderColor;
@@ -30,15 +32,59 @@ class ImageChart
         $this->titleText = config('image-charts.default_title_text', 'mohsen.sbs');
     }
 
+    /**
+     * @param array $labels
+     * @return $this
+     */
     public function setLabels(array $labels): self
     {
         $this->labels = $labels;
         return $this;
     }
 
+    /**
+     * @param array $data
+     * @return $this
+     */
     public function setData(array $data): self
     {
         $this->data = $data;
+        return $this;
+    }
+
+    public function setBackgroundColor(string $color): self
+    {
+        $this->bgColor = $color;
+        return $this;
+    }
+
+    public function setDatasetBackgroundColor(string $color): self
+    {
+        $this->datasetBgColor = $color;
+        return $this;
+    }
+
+    public function setDatasetBorderColor(string $color): self
+    {
+        $this->datasetBorderColor = $color;
+        return $this;
+    }
+
+    public function setWidth(string $width): self
+    {
+        $this->width = $width;
+        return $this;
+    }
+
+    public function setHeight(string $height): self
+    {
+        $this->height = $height;
+        return $this;
+    }
+
+    public function setTitleText(string $title): self
+    {
+        $this->titleText = $title;
         return $this;
     }
 
@@ -86,5 +132,24 @@ class ImageChart
             $this->height,
             $this->width
         );
+    }
+
+    public function getImage(string $path = null): string
+    {
+        if (!$path) {
+            $path = config('image-charts.default_image_path');
+        }
+
+        if (!file_exists($path)) {
+            mkdir($path, 0777, true);
+        }
+
+        $filename = 'chart_' . time() . '.png';
+        $fullPath = $path . DIRECTORY_SEPARATOR . $filename;
+
+        $image = Http::get($this->getUrl())->body();
+        file_put_contents($fullPath, $image);
+
+        return $fullPath;
     }
 }
