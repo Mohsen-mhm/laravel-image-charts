@@ -93,6 +93,39 @@ $fullImagePath = (new ImageChart())
 
 <img src="example.png" alt="Example chart">
 
+## Full Usage Example
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+try {
+    $imageChart = (new ImageChart())
+        ->setLabels(['January', 'February', 'March'])
+        ->setData([10, 20, 30])
+        ->setBackgroundColor('#FFFFFF')
+        ->setDatasetBackgroundColor('#FF0000')
+        ->setDatasetBorderColor('#0000FF')
+        ->setWidth('800')
+        ->setHeight('400')
+        ->setTitleText('Monthly Data');
+
+    $chartUrl = $imageChart->getUrl();
+    $imagePath = $imageChart->getImage();
+
+    echo "Chart URL: $chartUrl\n";
+    echo "Image saved at: $imagePath\n";
+} catch (InvalidArgumentException $e) {
+    echo 'Error: ' . $e->getMessage();
+}
+```
+
+### Output
+```text
+Chart URL: https://image-charts.com/chart.js/2.8.0 ...
+Image saved at: .../storage/app/public/charts/chart_1718432986.png
+```
+<img src="full-example.png" alt="Example chart">
+
 ## Methods
 
 The ImageChart class provides the following methods for configuring your chart:
