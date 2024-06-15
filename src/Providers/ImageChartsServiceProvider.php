@@ -34,7 +34,7 @@ final class ImageChartsServiceProvider extends ServiceProvider
         });
 
         // Register the ImageChartFacade accessor
-        $this->app->bind('ImageChart', function ($app) {
+        $this->app->bind(ImageChart::class, function ($app) {
             return $app->make(ImageChart::class);
         });
     }

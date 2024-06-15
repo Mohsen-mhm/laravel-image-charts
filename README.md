@@ -52,6 +52,16 @@ $chartUrl = (new ImageChart())
         ->setData([10, 20, 30])
         ->setLabels(['January', 'February', 'March'])
         ->getUrl();
+``` 
+
+or use Facade:
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+$chartUrl = ImageChart::setData([10, 20, 30])
+        ->setLabels(['January', 'February', 'March'])
+        ->getUrl();
 ```
 
 You can then use this URL to display the chart in your application.
@@ -72,6 +82,16 @@ $fullImagePath = (new ImageChart())
         ->setData([10, 20, 30])
         ->setLabels(['January', 'February', 'March'])
         ->getImage();
+``` 
+
+or use Facade:
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+$fullImagePath = ImageChart::setData([10, 20, 30])
+        ->setLabels(['January', 'February', 'March'])
+        ->getImage();
 
 ```
 
@@ -85,6 +105,18 @@ $customPath = storage_path('app/public/custom_charts');
 
 $fullImagePath = (new ImageChart())
         ->setData([10, 20, 30])
+        ->setLabels(['January', 'February', 'March'])
+        ->getImage($customPath);
+``` 
+
+or use Facade:
+
+```php
+use MohsenMhm\LaravelImageCharts\ImageChart;
+
+$customPath = storage_path('app/public/custom_charts');
+
+$fullImagePath = ImageChart::setData([10, 20, 30])
         ->setLabels(['January', 'February', 'March'])
         ->getImage($customPath);
 ```
@@ -120,10 +152,12 @@ try {
 ```
 
 ### Output
+
 ```text
 Chart URL: https://image-charts.com/chart.js/2.8.0 ...
 Image saved at: .../storage/app/public/charts/chart_1718432986.png
 ```
+
 <img src="full-example.png" alt="Example chart">
 
 ## Methods
