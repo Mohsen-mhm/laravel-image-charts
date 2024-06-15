@@ -39,7 +39,7 @@
         "MohsenMhm\\LaravelImageCharts\\Providers\\ImageChartsServiceProvider"
       ],
       "aliases": {
-        "ImageChart": "MohsenMhm\\LaravelImageCharts\\Facades\\ImageChart"
+        "ImageChart": "MohsenMhm\\LaravelImageCharts\\Facades\\ImageChartFacade"
       }
     }
   }
