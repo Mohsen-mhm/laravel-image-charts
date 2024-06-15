@@ -30,14 +30,7 @@ final class ImageChartsServiceProvider extends ServiceProvider
 
         // Register the ImageChart class with the application container
         $this->app->singleton(ImageChart::class, function ($app) {
-            return new ImageChart([
-                'default_bg_color' => config('image-charts.default_bg_color'),
-                'default_dataset_bg_color' => config('image-charts.default_dataset_bg_color'),
-                'default_dataset_border_color' => config('image-charts.default_dataset_border_color'),
-                'default_width' => config('image-charts.default_width'),
-                'default_height' => config('image-charts.default_height'),
-                'default_title_text' => config('image-charts.default_title_text'),
-            ]);
+            return new ImageChart();
         });
 
         // Register the ImageChartFacade accessor

@@ -150,6 +150,8 @@ This package is open-sourced software licensed under the [MIT license](https://m
 
 Contributions are welcome! Please feel free to submit a Pull Request on GitHub.
 
+More chart types & features coming soon... :)
+
 ## Authors
 
 [Mohsen Mohammadi](https://mohsen.sbs) - Developer
