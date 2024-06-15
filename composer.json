@@ -3,6 +3,7 @@
   "description": "Image-charts PHP library to make chart in image format",
   "type": "laravel-package",
   "keywords": [
+    "php",
     "laravel",
     "chart",
     "chart.js"
