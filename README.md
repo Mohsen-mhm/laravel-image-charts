@@ -145,9 +145,11 @@ try {
 
     $chartUrl = $imageChart->getUrl();
     $imagePath = $imageChart->getImage();
+    $binaryData = $imageChart->getBinary();
 
     echo "Chart URL: $chartUrl\n";
     echo "Image saved at: $imagePath\n";
+    echo "image in binary format: $binaryData\n";
 } catch (InvalidArgumentException $e) {
     echo 'Error: ' . $e->getMessage();
 }
@@ -158,6 +160,7 @@ try {
 ```text
 Chart URL: https://image-charts.com/chart.js/2.8.0 ...
 Image saved at: .../storage/app/public/charts/chart_1718432986.png
+image in binary format: b"ëPNG \x1A \x00\ ..."
 ```
 
 <img src="full-example.png" alt="Example chart">

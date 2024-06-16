@@ -232,6 +232,11 @@ class ImageChart
         return $fullPath;
     }
 
+    public function getBinary(): string
+    {
+        return Http::get($this->getUrl())->body();
+    }
+
     private function isValidColor(string $color): bool
     {
         return preg_match('/^#?(?:[a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/', $color) === 1;

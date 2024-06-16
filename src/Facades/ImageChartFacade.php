@@ -3,7 +3,6 @@
 namespace MohsenMhm\LaravelImageCharts\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use MohsenMhm\LaravelImageCharts\ImageChart;
 
 /**
  * @method static self setData(array $data)
@@ -17,12 +16,12 @@ use MohsenMhm\LaravelImageCharts\ImageChart;
  * @method static string getUrl()
  * @method static string getImage(string $path = null)
  *
- * @see ImageChart
+ * @see \MohsenMhm\LaravelImageCharts\ImageChart
  */
 class ImageChartFacade extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return ImageChart::class;
+        return 'ImageChart';
     }
 }
