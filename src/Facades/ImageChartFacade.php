@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static self setTitleText(string $title)
  * @method static string getUrl()
  * @method static string getImage(string $path = null)
+ * @method static string getBinary()
  *
  * @see \MohsenMhm\LaravelImageCharts\ImageChart
  */

@@ -180,6 +180,7 @@ The ImageChart class provides the following methods for configuring your chart:
 * `getUrl()`: Generate and return the chart URL.
 * `getImage(string $path = null)`: Download the chart image to a specified local file path, or use the default path
   if not specified. Returns the full path to the saved image.
+* `getBinary()`: Generate and return the chart image in binary format.
 
 ## License
 
