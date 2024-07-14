@@ -202,9 +202,8 @@ More chart types & features coming soon... :)
 [Mohsen Mohammadi](https://mohsen.sbs) - Developer
 For more information, please visit the [GitHub repository](https://github.com/Mohsen-mhm/laravel-image-charts).
 
-
-[ico-laravel]: https://img.shields.io/badge/Laravel-≥%208.0-ff2d20?style=&logo=laravel
-[ico-php]: https://img.shields.io/badge/php-≥%208.0-7b7eb1?style=&logo=php
+[ico-laravel]: https://img.shields.io/badge/Laravel-%20%5E9.0|%5E10.0|%5E11.0-ff2d20?style=&logo=laravel
+[ico-php]: https://img.shields.io/packagist/dependency-v/Mohsen-mhm/laravel-image-charts/php.svg?
 [link-packagist]: https://packagist.org/packages/Mohsen-mhm/laravel-image-charts
 [ico-license]: http://poser.pugx.org/Mohsen-mhm/laravel-image-charts/license
 [ico-downloads]: http://poser.pugx.org/Mohsen-mhm/laravel-image-charts/downloads
