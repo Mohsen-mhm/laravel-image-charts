@@ -2,10 +2,11 @@
 
 Image-charts PHP library to generate charts in image format for your Laravel application.
 
-<img src="logo.png" alt="Logo">
+<img src="art/logo.png" alt="Logo">
 
 [![PHP Version Require][ico-php]][link-packagist]
 [![Required Laravel Version][ico-laravel]][link-packagist]
+[![Latest Stable Version][ico-stable]][link-packagist]
 [![Total Downloads][ico-downloads]][link-packagist]
 [![License][ico-license]][link-packagist]
 
@@ -130,7 +131,7 @@ $fullImagePath = ImageChart::setData([10, 20, 30])
 
 ### Output
 
-<img src="example.png" alt="Example chart">
+<img src="art/example.png" alt="Example chart">
 
 ## Full Usage Example
 
@@ -168,7 +169,7 @@ Image saved at: .../storage/app/public/charts/chart_1718432986.png
 image in binary format: b"ëPNG \x1A \x00\ ..."
 ```
 
-<img src="full-example.png" alt="Example chart">
+<img src="art/full-example.png" alt="Example chart">
 
 ## Methods
 
@@ -202,8 +203,10 @@ More chart types & features coming soon... :)
 [Mohsen Mohammadi](https://mohsen.sbs) - Developer
 For more information, please visit the [GitHub repository](https://github.com/Mohsen-mhm/laravel-image-charts).
 
+
 [ico-laravel]: https://img.shields.io/badge/Laravel-%20%5E9.0|%5E10.0|%5E11.0-ff2d20?style=&logo=laravel
 [ico-php]: https://img.shields.io/packagist/dependency-v/Mohsen-mhm/laravel-image-charts/php.svg?
 [link-packagist]: https://packagist.org/packages/Mohsen-mhm/laravel-image-charts
-[ico-license]: http://poser.pugx.org/Mohsen-mhm/laravel-image-charts/license
-[ico-downloads]: http://poser.pugx.org/Mohsen-mhm/laravel-image-charts/downloads
+[ico-stable]: http://poser.pugx.org/Mohsen-mhm/laravel-image-charts/v
+[ico-license]: https://poser.pugx.org/Mohsen-mhm/laravel-image-charts/license
+[ico-downloads]: https://poser.pugx.org/Mohsen-mhm/laravel-image-charts/downloads
